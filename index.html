@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="flyBridge : Instructions and files for creating rigs to attach flies to flyHolders">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <title>flyBridge</title>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-72213326-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ptweir/flyBridge">View on GitHub</a>
+          <a id="breadcrumbs_banner" href="http://ptweir.github.io/">ptweir home</a><a id="breadcrumbs_child" href="http://ptweir.github.io/flyBridge/">flyBridge</a>
+          <h1 id="project_title">flyBridge</h1>
+          <h2 id="project_tagline">Instructions and files for creating rigs to attach flies to flyHolders</h2>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ptweir/flyBridge/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ptweir/flyBridge/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+          <h7>
+          <a href="#introduction" class="btn">Introduction</a><font color="white"> |</font>
+          <a href="#metal-bridge" class="btn">Metal bridge</a><font color="white"> |</font>
+          <a href="#Peltier-cooler" class="btn">Peltier cooler</a><font color="white"> |</font>
+          <a href="#finished" class="btn">Final product</a><font color="white"> |</font>
+          <a href="#trouble-shooting" class="btn">Trouble shooting</a><font color="white"> |</font>
+          <a href="#referencing" class="btn">Referencing</a>
+          </h7>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
+
+<p>
+This website describes how to cheaply and easily create a rig to attach flies to <a href="http://ptweir.github.io/flyHolder/">flyHolders</a>.
+Most labs that I know of use custom machined parts that are difficult and time-consuming to fabricate and comercially available water chillers that are quite expensive, loud, and prone to failure. The following instructions all for equal performance for less than $200. There are two basic parts that we'll buy:</p>
+<p>
+&bull; I designed the <a href="#metal-bridge">metal bridge</a>, which can be machined or ordered online for ~$150.<br />
+&bull; The <a href="#Peltier-cooler">Peltier cooler</a> is available online.
+</p>
+
+<h3>
+<a id="metal-bridge" class="anchor" href="#metal-bridge" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Metal bridge</h3>
+<p>
+The solidworks file for the metal bridge can be downloaded <a href="files/bridgeForAirCooledPeltier2.SLDPRT" ">here</a>, and an STL file <a href="files/bridgeForAirCooledPeltier2.STL">here</a>. 
+</p>
+<p>
+It is possible machine this part out of aluminum yourself, but I recommend ordering it from <a href="https://www.protolabs.com" target="_blank">ProtoLabs</a>. Their prices and customer service are better than any other machine shop I've worked with. Use their CNC milling option. For material, select <b>Aluminum 6061-T651 Gray Aluminum</b>.It should cost about $150.
+</p>
+This is a 3D rendering of the metal bridge:<br />
+<script src="https://embed.github.com/view/3d/ptweir/flyBridge/gh-pages/files/bridgeForAirCooledPeltier2.STL"></script>
+View of the plastic frame from the top:<br />
+<img src="images/fromTopSchematic.png">
+View of the plastic frame from the bottom:<br />
+<img src="images/fromBottomSchematic.png">
+View of the plastic frame from the back:<br />
+<img src="images/fromBackSchematic.png">
+<p>Marie Suver has reported that when using these holders for electrophysiology it is necessary to shave off some of the side wall to allow the electrode to reach the brain.</p>
+<p>
+We insert magnets into the holes in the back of the frame to hold it in place during an experiment. Magnets sized 1" X 1/8" X 1/8" and magnetized through the short axis work well, like part #<a href="https://www.kjmagnetics.com/proddetail.asp?prod=BX022" target="_blank">BX022</a> from K&J Magnetics. (<strong>Pro-tip:</strong> if you allow the magnets to rotate in place, multiple holders can be snapped together for easy transport.)
+</p>
+<h3>
+<a id="metal-plate" class="anchor" href="#metal-plate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Making the metal plate</h3>
+<p>
+Labs should now be able to order the etched metal directly from Randy Johnson at <a href="http://www.etchitmn.com/" target="_blank">Etchit</a> (Ph: 763-684-4261). We are currently testing an improved design (available <a href="files/WeirPlateSteel3.DXF" target="_blank">here</a>). This .dxf file contains the design for the etched metal. Note that in this design we actually had three holders printed in one "part". They can be cut apart with scissors. We tried three different sizes and shapes for the hole. The metal that we used was 0.001" Stainless Steel, type 316 soft annealed (<a href="http://www.mcmaster.com/#2317k51/=11xs71y" target="_blank">McMaster-Carr</a> sells the material as shim stock, part #2317K51). The outer dimensions of the part are 3.07 x 1.07 inches. We had previously ordered the etched metal from <a href="http://www.fotofab.com/" target="_blank">Fotofab</a> using these files: <a href="files/WeirPlateSteel.DXF" target="_blank">file1</a>, <a href="files/WeirPlateSteel2.dxf" target="_blank">file2</a>, but we no longer recommend them.</p>
+Cut the individual pieces out from the sheet and apart from one another:<br />
+<img src="images/cutOut.jpg">
+Fold each (approximately square) plate using the slits as guides. Crease the folds, then partially unfold to match the contour of the plastic frame.<br />
+<img src="images/folded.jpg">
+<img src="images/folded2.jpg">
+<h3>
+<a id="finished" class="anchor" href="#finished" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final product</h3>
+<p>Glue the folded metal plate to the bottom of the plastic frame. You can use epoxy or some other glue that adheres to metal and plastic. Make sure there is a good seal, or saline will leak out. If you intend to track wingstrokes, the metal needs to be painted to reduce reflections. Blackboard paint works well to reduce reflections, but it does not adhere very well to the metal, so it helps to prime the metal with model paint.
+</p>
+<img src="images/fromSideSchematicWithFly.svg">
+The final product should look something like this:<br />
+<img src="images/fromTop.jpg">
+<img src="images/finished1.jpg">
+Note that the fly has clearance to flap its wings both on the ventral side,<br />
+<img src="images/finished2.jpg">
+and on the dorsal side.<br />
+<img src="images/finished3.jpg">
+Below is a magnified image of a partially dissected fly (apologies for the blurry photograph and bubbles).<br />
+<img src="images/dissected.jpg">
+<h3>
+<a id="trouble-shooting" class="anchor" href="#trouble-shooting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Troubleshooting</h3>
+<p>If you are having difficulting positioning the fly on the holder, you can mold the metal plate even after it is glued to the plastic frame by pushing it with an old set of forceps.</p>
+<p>If saline is leaking out of the holder, add glue to the metal-plastic seam. The slits are a common source of leaks.</p>
+<h3>
+<a id="referencing" class="anchor" href="#referencing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Referencing this work</h3>
+
+<p>This method for constructing fly holders was developed by Peter Weir and first published as online supplemental information associated with <a href="http://www.jneurosci.org/content/36/19/5397.short" target="_blank">Weir et al. (2016) Anatomical reconstruction and functional imaging reveal an ordered array of skylight polarization detectors in <em>Drosophila</em></a>. Please cite that paper if you use this design. Steve Safarik and Bettina Schnell both contributed to the design.</p>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">flyBridge maintained by <a href="https://github.com/ptweir">Peter Weir</a></p>
+        <p>Other GitHub projects by Peter are available at <a href="http://ptweir.github.io/">http://ptweir.github.io/</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
